@@ -1,6 +1,6 @@
 # lms_flutter_project
 
-A new Flutter project.
+- This Flutter Project Implements Tinder Clone.
 
 ## Getting Started
 
