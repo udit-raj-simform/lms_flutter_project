@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:lms_flutter_project/utils/exports.dart';
 
 class AppTheme {
   AppTheme._();
@@ -10,8 +10,15 @@ class AppTheme {
   }
 
   ThemeData light() => ThemeData(
-    useMaterial3: true,
-
-  );
-
+        useMaterial3: true,
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: MyColors.backgroundLight,
+          unselectedItemColor: MyColors.iconGrey,
+          selectedItemColor: Colors.white,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          elevation: 5,
+        ),
+      );
 }

@@ -1,3 +1,4 @@
+import 'package:lms_flutter_project/modules/home/home.dart';
 import 'package:lms_flutter_project/utils/exports.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class MyTinderApp extends StatelessWidget {
     return MaterialApp(
       title: Strings.appTitle,
       theme: AppTheme().light(),
-      home: Scaffold(),
+      home: const HomeScreen(),
     );
   }
 }
