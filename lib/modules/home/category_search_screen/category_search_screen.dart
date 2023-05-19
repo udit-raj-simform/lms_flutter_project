@@ -5,9 +5,18 @@ class CategorySearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: const Center(
-        child: Text("CategorySearchScreen"),
+    return Scaffold(
+      body: Container(
+        padding: const EdgeInsets.all(8.0),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisSize: MainAxisSize.max,
+            children: const [
+              VerifiedPhotoMatch(),
+            ],
+          ),
+        ),
       ),
     );
   }

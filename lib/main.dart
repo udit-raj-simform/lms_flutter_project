@@ -1,8 +1,9 @@
-import 'package:lms_flutter_project/modules/home/home.dart';
 import 'package:lms_flutter_project/utils/exports.dart';
 
 void main() {
-  runApp(const MyTinderApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((value) => runApp(const MyTinderApp()));
 }
 
 class MyTinderApp extends StatelessWidget {
@@ -13,7 +14,8 @@ class MyTinderApp extends StatelessWidget {
     return MaterialApp(
       title: Strings.appTitle,
       theme: AppTheme().light(),
-      home: const HomeScreen(),
+      initialRoute: NavigationManager.returnNavigationRoute(),
+      onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
 }

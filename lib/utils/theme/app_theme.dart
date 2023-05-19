@@ -20,5 +20,18 @@ class AppTheme {
           showUnselectedLabels: false,
           elevation: 5,
         ),
+        dialogBackgroundColor: MyColors.backgroundDark,
+        dialogTheme: const DialogTheme(
+          elevation: 5.0,
+          contentTextStyle: TextStyle(color: Colors.white),
+          titleTextStyle: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w500,
+            fontSize: 20.0,
+          ),
+        ),
+        buttonTheme: const ButtonThemeData(
+          colorScheme: ColorScheme.dark(),
+        ),
       );
 }

@@ -6,4 +6,6 @@ class MyColors {
   static const Color backgroundLight = Color(0xffffffff);
   static const Color backgroundDark = Color(0xff404040);
   static const Color iconGrey = Color(0xdd808080);
+
+  static const Color cardColor1 = Color(0xffff6ec7);
 }

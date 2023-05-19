@@ -9,7 +9,6 @@ class NavigatorModel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    debugPrint(childIndex.toString());
     return Navigator(
       onGenerateRoute: (RouteSettings settings) {
         return MaterialPageRoute(

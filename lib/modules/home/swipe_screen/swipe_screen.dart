@@ -1,4 +1,3 @@
-import 'package:lms_flutter_project/modules/home/swipe_screen/activity_screen.dart';
 import 'package:lms_flutter_project/utils/exports.dart';
 
 class SwipeScreen extends StatelessWidget {
@@ -9,27 +8,7 @@ class SwipeScreen extends StatelessWidget {
     return Container(
       child: Center(
         child: ElevatedButton(
-          onPressed: () => Navigator.push(
-            context,
-            // MaterialPageRoute(
-            //   builder: (context) => const ActivityScreen(),
-            // ),
-            PageRouteBuilder(
-              pageBuilder: (context, animation, secondaryAnimation) =>
-                  const ActivityScreen(),
-              transitionsBuilder:
-                  (context, animation, secondaryAnimation, child) {
-                const begin = Offset(0.0, 1.0);
-                const end = Offset.zero;
-                final tween = Tween(begin: begin, end: end);
-                final offsetAnimation = animation.drive(tween);
-                return SlideTransition(
-                  position: offsetAnimation,
-                  child: child,
-                );
-              },
-            ),
-          ),
+          onPressed: () => Navigator.pushNamed(context, Routes.activity),
           child: const Text("New page"),
         ),
       ),

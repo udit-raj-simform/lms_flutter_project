@@ -7,14 +7,25 @@ class SettingsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Center(
-        child: ElevatedButton(
-          child: const Text("SettingsScreen"),
-          onPressed: () {
-            Navigator.popUntil(context, (route) {
-              debugPrint(route.toString());
-              return false;
-            });
-          },
+        child: Column(
+          children: [
+            ElevatedButton(
+              child: const Text("SettingsScreen"),
+              onPressed: () {
+                Navigator.popUntil(context, (route) {
+                  debugPrint(route.toString());
+                  return false;
+                });
+              },
+            ),
+            ElevatedButton(
+              child: const Text("LogOut"),
+              onPressed: () {
+                NavigationManager.isLoggedIn = false;
+                Navigator.pushNamed(context, Routes.loginIntro);
+              },
+            ),
+          ],
         ),
       ),
     );

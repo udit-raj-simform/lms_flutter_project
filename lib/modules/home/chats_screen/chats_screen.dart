@@ -7,7 +7,7 @@ class ChatsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: const Center(
-        child: Text("CategorySearchScreen"),
+        child: Text("ChatsScreen"),
       ),
     );
   }
